@@ -28,20 +28,17 @@ Search for Docker, and select Docker Desktop in the search results to start Dock
 
    
 ## App-Deployment
-**Step1**: 
+1. Clone the project  & open terminal download navigate project root directory where the Dockerfile placed
 
-Clone the project  & open terminal download navigate project root directory where the Dockerfile placed
-**Step2**: 
-Run the following command to build a docker image
+1. Run the following command to build a docker image
 **docker build -t <imagename>:<tag> .**
-**Step3**:
-Run the following command to show the latest created container
+
+1. Run the following command to show the latest created container
      **docker ps -l**
-**Step4**:
-Run the following command to run the Docker container
+
+1. Run the following command to run the Docker container
          **docker run <imagename/id>**
-**Step5**:
-Run the following command to show all the running commands
+1. Run the following command to show all the running commands
      **docker ps**
    
 **Testing:** 
