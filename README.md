@@ -31,15 +31,15 @@ Search for Docker, and select Docker Desktop in the search results to start Dock
 1. Clone the project  & open terminal download navigate project root directory where the Dockerfile placed
 
 1. Run the following command to build a docker image
-**docker build -t <imagename>:<tag> .**
+```**docker build -t <imagename>:<tag> .**```
 
 1. Run the following command to show the latest created container
-     **docker ps -l**
+     ```**docker ps -l**```
 
 1. Run the following command to run the Docker container
-         **docker run <imagename/id>**
+        ``` **docker run <imagename/id>** ```
 1. Run the following command to show all the running commands
-     **docker ps**
+     ``` **docker ps** ```
    
 **Testing:** 
 
