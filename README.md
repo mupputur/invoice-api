@@ -2,9 +2,9 @@
 
 - [Overview](#overview)
 - [Pre-requisites](#pre-requisites)
-- [Docker-Setup](#Docker-Setup)
+- [Docker-Setup](#docker-setup)
 - [App-Deployment](#App-deployment)
-- [Testing](#Curl-Interface)
+- [Testing](#Testing)
 
 ## Overview 
 
@@ -12,19 +12,16 @@
 
 ## Docker Setuo
 
-**Step1**:
-Download Docker Desktop on Windows
+1. Download Docker Desktop on Windows
     **https://desktop.docker.com**
     
-**Step2**: 
-Run the following command in a terminal to install Docker Desktop
+2. Run the following command in a terminal to install Docker Desktop
     **"Docker Desktop Installer.exe" install**
     
-**Step3**:
-Run the following command in a terminal if your admin account is different to your user account, you must add the user to the docker-users group:
+3. Run the following command in a terminal if your admin account is different to your user account, you must add the user to the docker-users group:
     **net localgroup docker-users <user> /add**
-**Step4**:
-Search for Docker, and select Docker Desktop in the search results to start Docker Desktop
+   
+4. Search for Docker, and select Docker Desktop in the search results to start Docker Desktop
 
    
 ## App-Deployment
