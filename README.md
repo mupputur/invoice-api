@@ -2,7 +2,7 @@
 
 - [Overview](#overview)
 - [Pre-requisites](#pre-requisites)
-- [Docker Setup](#Docker Setup)
+- [Docker-Setup](#Docker-Setup)
 - [App-Deployment](#App-deployment)
 - [Testing](#Curl-Interface)
 
@@ -44,7 +44,7 @@ Run the following command to run the Docker container
 Run the following command to show all the running commands
      **docker ps**
    
-## Testing 
+**Testing:** 
 
 **Customer APIs testing using curl command**
  ```
