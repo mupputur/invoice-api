@@ -37,7 +37,11 @@ class InvoiceModel:
         all_invoices = [dict((my_cursor.description[i][0], value) for i, value in enumerate(row)) for row in \
                          my_cursor.fetchall()]
         print("customers: ", all_invoices)
-        return all_invoices
+        if all_invoices:
+            return all_invoices
+        else:
+            print("NO customers data found")
+            return None
 
     def get_invoice(self, invoice_id):
         select_query = f"SELECT * FROM invoice WHERE InvoiceId = '{invoice_id}'"
@@ -60,7 +64,7 @@ class InvoiceModel:
 
         # execute sql query to filter the invoice
         my_cursor.execute(filter_customer)
-        existing_invoice = my_cursor.fetchone()
+        existing_invoice = my_cursor.fetchall()
         print(existing_invoice)
         if existing_invoice:
             delete_query = f"DELETE FROM invoice WHERE InvoiceId = '{invoice_id}'"
