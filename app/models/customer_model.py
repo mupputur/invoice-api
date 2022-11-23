@@ -52,8 +52,12 @@ class CustomersModel:
         my_cursor.execute(select_query)
         all_customers = [dict((my_cursor.description[i][0], value) for i, value in enumerate(row)) for row in \
                          my_cursor.fetchall()]
-        print("customers: ", all_customers)
-        return all_customers
+        if all_customers:
+            print("customers: ", all_customers)
+            return all_customers
+        else:
+            print("No invoices data found")
+            return None
 
     def get_customer(self, customer_id):
         select_query = f"SELECT * FROM customer WHERE CustomerID = '{customer_id}'"
@@ -76,19 +80,18 @@ class CustomersModel:
 
         # execute sql query to filter the customer
         my_cursor.execute(filter_customer)
-        existing_customer = my_cursor.fetchone()
-
+        existing_customer = my_cursor.fetchall()
         if existing_customer:
             delete_query = f"DELETE FROM customer WHERE CustomerID = '{customer_id}'"
 
             # execute sql query to delete customer based on given customer id
-            my_cursor.execute(delete_query)
+            dd =my_cursor.execute(delete_query)
             my_db.commit()
             print(f"Deleted {customer_id}")
             return f"CustomerID: {customer_id} deleted"
         else:
             print(f"CustomerID {customer_id} doesn't exist")
-            return f"CustomerID {customer_id} doesn't exist"
+            return None
 
 
 # CustomersModel().add_customer(first_name="Manohar", last_name="Upputuri", company="Apple", address="USA", city="USA", \
