@@ -9,6 +9,7 @@ class DbConnection:
 
     def connect(self):
         try:
+            print(config["db_host"])
             my_db = mysql.connector.connect(
                 host=config["db_host"],
                 user=config["db_user"],
@@ -20,4 +21,7 @@ class DbConnection:
             return my_db
         except Exception as e:
             print("Exception: ", e)
+
+
+
 

@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  invoice-app:
+    build: .
+    links:
+      - db
+    ports:
+      - "5000:5000"
+
+  db:
+    image: mysql:8.0.31
+    ports:
+      - "32000:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Siva1234
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro

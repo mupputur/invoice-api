@@ -1,6 +1,6 @@
 {
-  "db_host": "localhost",
+  "db_host": "127.0.0.1",
   "db_user": "root",
-  "db_pwd": "Siva@123",
+  "db_pwd": "Siva1234",
   "db_name": "flaskdb"
 }
