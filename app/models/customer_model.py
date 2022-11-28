@@ -3,7 +3,6 @@ from app.libUtils.db_config import read_config
 
 # read from config file and pass database credentials
 config = read_config()
-print(config["db_host"], config["db_user"], config["db_pwd"])
 my_db = DbInterface(db_host=config["db_host"], db_user=config["db_user"], db_pwd=config["db_pwd"])
 
 
@@ -29,7 +28,7 @@ class CustomersModel:
             # execute sql query to filter the customer
             my_db.db_cursor.execute(filter_customer)
             existing_customer = my_db.db_cursor.fetchone()
-
+            print(existing_customer)
             if existing_customer:
                 print(f"Customer already exists with {email}")
                 return f"Customer already exists with {email}"
@@ -39,7 +38,7 @@ class CustomersModel:
                                 (FirstName, LastName, Company, Gender, City, Country, PostalCode, Email, Phone)
                                 VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s)'''
                 insert_data = (first_name, last_name, company, gender, city, country, postal_code, email, phone)
-
+                print(insert_data)
                 # execute sql query to insert new record
                 my_db.db_cursor.execute(insert_query, insert_data)
                 #my_db.commit()

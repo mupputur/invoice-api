@@ -71,7 +71,6 @@ class DbInterface:
             self.db_cursor = self.con.cursor()
         except Exception as e:
             print(f"Unable to connect to the data base. {str(e)}")
-            print(self.host, self.user, self.password)
             exit(1)
 
     def initialize_db(self):
@@ -121,4 +120,4 @@ class DbInterface:
             self.con.commit()
 
 if __name__ == "__main__":
-    db = DbInterface(db_host="db", db_user="root", db_pwd="Siva@123")
+    db = DbInterface(db_host="127.0.0.1", db_user="root", db_pwd="Siva@123")
