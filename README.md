@@ -30,7 +30,7 @@
 1. Run the dockerized app by executing the following command
 ```**docker-compose up -d**```
 
-2. If everything went right, you will see Running on http://0.0.0.0:5000/ (Press CTRL+C to quit) in the terminal or you can see container logs in Docker Desktop app
+2. If everything went right, you will see Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) in the terminal or you can see container logs in Docker Desktop app
 
 3. Run the following command to stop the Docker container
         ``` **docker-compose down** ```
