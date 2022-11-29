@@ -88,6 +88,7 @@ class DbInterface:
                 # Creating a database if not exits
                 DbInterface.create_database(self.db_cursor)
                 print("Database {} created successfully.".format(DbInterface.DB_NAME))
+                self.db_cursor.execute("USE {}".format(DbInterface.DB_NAME))
                 self.create_tables()
                 self.con.database = DbInterface.DB_NAME
             else:
@@ -111,12 +112,12 @@ class DbInterface:
                     print(err.msg)
             else:
                 print("OK")
-        self.db_cursor.close()
-        self.con.close()
+        # self.db_cursor.close()
+        # self.con.close()
 
     def commit_changes(self):
         if self.con:
             self.con.commit()
 
 if __name__ == "__main__":
-    db = DbInterface(db_host="127.0.0.1", db_user="root",db_pwd="root@123")
+    db = DbInterface(db_host="127.0.0.1", db_user="root", db_pwd="Siva@123")

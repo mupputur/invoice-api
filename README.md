@@ -26,22 +26,23 @@
    
 ## App-Deployment
 1. Clone the project  & open terminal download navigate project root directory where the Dockerfile placed
+**Note:** Use service names(invoice-app, db) which are defined in the docker-compose file to run Flask app and MySQL in Docker container
+1. Run the dockerized app by executing the following command
+```**docker-compose up -d**```
 
-1. Run the following command to build a docker image
-```**docker build -t <imagename>:<tag> .**```
+2. If everything went right, you will see Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) in the terminal or you can see container logs in Docker Desktop app
 
-1. Run the following command to show the latest created container
-     ```**docker ps -l**```
-
-1. Run the following command to run the Docker container
-        ``` **docker run <imagename/id>** ```
-1. Run the following command to show all the running commands
+3. Run the following command to stop the Docker container
+        ``` **docker-compose down** ```
+   
+4. Run the following command to show all the containers
      ``` **docker ps** ```
    
 **Testing:** 
 
 **Customer APIs testing using curl command**
  ```
+**Note:** Use localhost/127.0.0.1 as hosts to run Flask app and connect MySQL Database
 1. To add a new customer
 
     **curl --X POST -H "Content-type:application/json" --data-binary "{\"customer_id\": 1002,\"first_name\": \"vishnu\",\"last_name\": \"patnayak\",\"company\": \"Google\",\"address\": \"USA\",\"city\": \"USA\",\"state\": \"USA\",\"country\": \"USA\",\"postal_code\": 54332,\"phone\": 564325456,\"email\": \"vishnu@gmail.com\"}" http://127.0.0.1:5000/add_customer**
