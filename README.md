@@ -34,10 +34,13 @@
 
 5. If everything went right, you will see Running on http://<service_name>:5000 or http://127.0.0.1:5000/ (Press CTRL+C to quit) in the terminal or you can see container logs in Docker Desktop app
 6. Check http://<service_name>:5000 or http://127.0.0.1:5000/ on the browser
-3. Run the following command if you want to stop the Docker container
+7. Run the following command if you want open bash shell inside mysql container to ron sql quries
+      ``` **docker exec -it <mysql_container id/name>> bash** ```
+   
+8. Run the following command if you want to stop the Docker container
         ``` **docker-compose down** ```
    
-4. Run the following command to show all the containers
+9. Run the following command to show all the containers
      ``` **docker ps** ```
    
 **Testing:** 
