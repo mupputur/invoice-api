@@ -24,15 +24,17 @@
 4. Search for Docker, and select Docker Desktop in the search results to start Docker Desktop
 
    
-## App-Deployment
-1. Clone the project  & open terminal download navigate project root directory where the Dockerfile placed
-**Note:** Use service names(invoice-app, db) which are defined in the docker-compose file to run Flask app and MySQL in Docker container
-1. Run the dockerized app by executing the following command
+## App-Deployment in Docker
+1. Clone the project & open terminal download navigate project root directory where the Dockerfile and Docker-Compose files are placed
+**Note:** Use service names(invoice-app, db) which are defined in the docker-compose file as database and flask hosts to run Flask app and MySQL in Docker container
+2. Change db_host value to "db" and db_pwd to "root" in config.json and db_connect.py files
+3. Change host value to "invoice-app" in main.py file
+4. Run the dockerized app by executing the following command
 ```**docker-compose up -d**```
 
-2. If everything went right, you will see Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) in the terminal or you can see container logs in Docker Desktop app
-
-3. Run the following command to stop the Docker container
+5. If everything went right, you will see Running on http://<service_name>:5000 or http://127.0.0.1:5000/ (Press CTRL+C to quit) in the terminal or you can see container logs in Docker Desktop app
+6. Check http://<service_name>:5000 or http://127.0.0.1:5000/ on the browser
+3. Run the following command if you want to stop the Docker container
         ``` **docker-compose down** ```
    
 4. Run the following command to show all the containers
