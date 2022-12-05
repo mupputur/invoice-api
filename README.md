@@ -10,7 +10,7 @@
 
 ## Pre-requisite 
 
-## Docker Setuo
+## Docker Setup
 
 1. Download Docker Desktop on Windows
     **https://desktop.docker.com**
